@@ -12,7 +12,7 @@ const {
   forgotpassword,
   resetPassword,
   resetpassword,
-  updateOneUser,
+  //updateOneUser,
 } = require("./controllers");
 router.post("/register", registerNewUser);
 router.get("/is-auth", isAuthenticated);
@@ -24,6 +24,6 @@ router.get("/forgotpassword",forgotPassword);
 router.post("/forgotpassword",forgotpassword);
 router.get("/resetpassword/:uniqueId",resetPassword);
 router.post("/resetpassword/:uniqueId",resetpassword);
-router.post("/update-user",updateOneUser);
+//router.post("/update-user",updateOneUser);
 
 module.exports = router;
