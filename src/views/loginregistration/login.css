@@ -1,0 +1,201 @@
+.main-container {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.card-container {
+  position: absolute;
+  width: 431px;
+  height: 700;
+  left: 122px;
+  top: 150px;
+  border: 1px solid #000000;
+  border-style: solid;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
+}
+.image-container {
+  position: absolute;
+  width: 735px;
+  height: 600px;
+  left: 683px;
+  top: 21px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.row1-text1 {
+  width: 99px;
+  height: 45px;
+  right: 120px;
+  top: 90px;
+  margin-top: 15px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.row2-text2 {
+  width: 308px;
+  height: 54px;
+  left: 124px;
+  top: 217px;
+  font-weight: 200;
+  font-size: 20px;
+  font-style: italic;
+}
+.emailbox {
+  width: 429px;
+  height: 64px;
+  left: 119px;
+  top: 338px;
+}
+.label1 {
+  left: 0%;
+  right: 91.61%;
+  top: 0%;
+  bottom: 68.75%;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #960d0d;
+}
+
+.mail {
+  position: absolute;
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  margin-left: -35px;
+  margin-top: 10px;
+  cursor: pointer;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.field1 {
+  width: 191px;
+  height: 40px;
+  left: 122px;
+  top: 465px;
+  width: 429px;
+  left: 124px;
+  top: 498px;
+  border-radius: 32px;
+
+  background: #eee7e7;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+}
+.passwordbox {
+  margin-top: 15px;
+  width: 431px;
+  height: 64px;
+  left: 122px;
+  top: 436px;
+}
+.label2 {
+  width: 64px;
+  height: 20px;
+  left: 124px;
+  top: 436px;
+  padding-top: 2px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #960d0d;
+}
+.field2 {
+  padding-top: 2px;
+  width: 191px;
+  height: 40px;
+  left: 122px;
+  top: 465px;
+  width: 429px;
+  left: 124px;
+  top: 498px;
+  border-radius: 32px;
+
+  background: #eee7e7;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+}
+.pass-eye {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  margin-left: -35px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.forgotfield {
+  position: absolute;
+  width: 429px;
+  height: 18px;
+  left: 124px;
+  top: 517px;
+}
+.forgottext {
+  position: absolute;
+  bottom: 170px;
+  right: 130px;
+  /* identical to box height */
+
+  color: #960d0d;
+}
+.button {
+  margin-top: 35px;
+}
+.login-button {
+  position: absolute;
+  width: 429px;
+  height: 53px;
+
+  background: #0c21c1;
+  box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  margin-top: 40px;
+}
+.continue {
+  position: absolute;
+  width: 130px;
+  height: 24px;
+  right: 150px;
+  bottom: 190px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #960d0d;
+}
+.social-container {
+  position: absolute;
+  width: 165px;
+  height: 43.12px;
+  left: 120px;
+  bottom: 80px;
+}
