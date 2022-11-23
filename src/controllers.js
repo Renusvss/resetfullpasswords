@@ -1,16 +1,16 @@
 const uuid = require("uuid");
 const express = require("express");
 const CryptoJS = require("crypto-js");
-//const dbConnect = require("./utils/db");
+const dbConnect = require("./utils/db");
 const { response } = require("express");
 const Users = require("./models");
 var jwt = require("jsonwebtoken");
 var privateKey = "Renu";
-//const ejs = require("ejs");
-const registerNewUser = async (req, res) => {
+const ejs = require("ejs");
+const registerNewUser = (req, res) => {
   var data = req.body;
   console.log(data);
-  data.uniqueId = uuid.v4();
+   data.uniqueId = uuid.v4();
   // var encPassword = CryptoJS.AES.encrypt(
   //   data.password,
   //   data.uniqueId
@@ -20,9 +20,9 @@ const registerNewUser = async (req, res) => {
 
   var newUser = Users(data);
 
-  var response = await newUser.save();
-
-  return res.json(response);
+  newUser.save().then((response) => {
+    return res.json(response);
+  });
 };
 
 const getAllUsers = (req, res) => {
@@ -77,15 +77,15 @@ const loginUser = async (req, res) => {
   // if (decPass !== data.password) {
   //   return res.json({ status: false, msg: "You entered wrong Password" });
   // }
-
-  if (data.password !== user.password) {
+    
+  if(data.password !== user.password){
     return res.json({ status: false, msg: "You entered wrong Password" });
   }
 
   var token = jwt.sign({ email: user.email, _id: user._id }, privateKey);
 
-  user.uniqueId = undefined;
-  user.password = undefined;
+  // user.uniqueId = undefined;
+  // user.password = undefined;
 
   return res.json({ status: true, data: user, token: token });
 };
@@ -180,19 +180,19 @@ const resetpassword = async (req, res) => {
   var data = req.body;
   // var newpassword = req.body;
   // var confirmpassword = req.body;
-  if (data.password == data.password1) {
+  if (data.password == data.passwords) {
     Users.updateMany(userId, data).then((response) => {
-      return res.json({ status: "updated", user: response });
+       return res.json({user:response});
     });
   }
   // else{
   //     return res.json({ status: false, msg: "You entered wrong Password" });
   //    }
-  // }
-  if (data.password !== data.password1) {
+  
+  if(data.password !== data.passwords) {
     return res.json({ status: false, msg: "You entered wrong Password" });
   }
-};
+}
 
 module.exports = {
   registerNewUser,
@@ -205,5 +205,5 @@ module.exports = {
   forgotpassword,
   resetPassword,
   resetpassword,
-  // updateOneUser,
+  //updateOneUser,
 };

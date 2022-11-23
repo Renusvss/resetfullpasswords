@@ -53,8 +53,15 @@
           },
           body: JSON.stringify(obj),
         });
-       console.log("reset link has been sent to your registered mail id click on the link to proceed")
+        if (response.status === false) {
+          error.innerText = response.msg;
+          error.style.color = "red";
+        } else {
+          error.innerText = "";
+          localStorage.setItem("token", response.token);
+          localStorage.setItem("userData", JSON.stringify(response.data));
           window.location.href = "new1.html";
+        }
       };
     </script>
   </body>
